@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "5.5.0"
+   }, 
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
