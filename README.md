@@ -137,9 +137,13 @@ info:    A new remote, 'azure', has been added to your local git repository
 info:    Use git locally to make changes to your site, commit, and then use 'git push azure master' to deploy to Azure                                      
 info:    site create command OK                
 ```
+
 ### NOTE
-1. delete C:\Users\{user name}\.azure directory, if you get a  'cannot find webspace ussouthcenter ' error
-2. run `git remote -v` and you can see a azure remote respository is already added to your local respoitory
+1. check portal for git-url. it may have port# in it. e.g. https://username@site-name.scm.azurewebsite.net:443/site-name.git
+   if it's the case, run `git remote set-url azure url-with-port#
+   after `git push azure master`, the windows authentication pops up (only in windows 10?), click Cancel and this will default to Basic authentication (type password in console)
+2. delete C:\Users\{user name}\.azure directory, if you get a  'cannot find webspace ussouthcenter ' error
+3. run `git remote -v` and you can see a azure remote respository is already added to your local respoitory
 ```
 $ git remote -v                                                                                          
 azure   https://bambora@quantas-api.scm.azurewebsites.net/quantas-api.git (fetch)
