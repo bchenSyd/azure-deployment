@@ -139,9 +139,8 @@ info:    site create command OK
 ```
 
 ### NOTE
-1. check portal for git-url. it may have port# in it. e.g. https://username@site-name.scm.azurewebsite.net:443/site-name.git
-   if it's the case, run `git remote set-url azure url-with-port#
-   after `git push azure master`, the windows authentication pops up (only in windows 10?), click Cancel and this will default to Basic authentication (type password in console)
+1. after `git push azure master`, the windows authentication pops up (only in windows 10?), click Cancel and this will default to Basic authentication (type password in console)
+   if issue persists, check portal for git-url. it may have port# in it. e.g. https://username@site-name.scm.azurewebsite.net:443/site-name.git if it's the case, run `git remote set-url azure url-with-port#
 2. delete C:\Users\{user name}\.azure directory, if you get a  'cannot find webspace ussouthcenter ' error
 3. run `git remote -v` and you can see a azure remote respository is already added to your local respoitory
 ```
